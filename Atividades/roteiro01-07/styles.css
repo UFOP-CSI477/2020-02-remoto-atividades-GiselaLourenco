@@ -1,0 +1,224 @@
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap";
+
+:root{
+    --color-black:#233844; 
+    --color-rocket:#00efff57;
+    --secundary-color: #2a908942;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    background: #163242;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+header{
+    padding: 32px; 
+    border-bottom: 1px solid #333;
+    background: rgba(10, 10, 10, 0.1);
+}
+
+.links {
+    text-align: center;
+}
+
+/* Para referenciar classes usa o '.' */
+
+.links a{
+    color: white;
+    font-size: 18px;
+    line-height: 28px; /*permite controlar o espaçamento entre as linhas de um texto */
+    margin: 0px 16px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    
+}
+
+.links a:hover{  /* em torno */
+    color: var(--color-black);
+    transition: color 200ms;
+}
+
+#links-footer a{
+    border-bottom: 1px solid var(--color-black);
+    margin: 18px;
+}
+
+/* HOME */
+#wrapper{
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img{
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p{
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#wrapper p a{
+    color: var(--color-green);
+}
+/* CARDS */
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* cria colunas*/
+    gap: 20px; /* espaço entre o grid*/
+}
+
+.card {
+    background-color: var(--color-rocket);
+}
+
+.card_img-container img {
+    width: 100%;
+}
+
+.card_content,
+.card_info {
+    padding: 24px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.card_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*eixo x: deixa free e price na mesma linha! fr: fraction -> 1fr 1fr, vai gerar duas colunas*/ 
+}
+
+.card_register{
+    background-color: var(--color-rocket);
+    filter: brightness(90%);  /* Permite aplicar efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento */
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* ## DETAILS ## */
+.details{
+    padding: 32px;
+}
+
+.details .item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child{
+    border: none;
+}
+.details h3,
+.details .item div:nth-child(1){
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.details .item div:nth-child(2){
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.details .item span{
+    padding: 8px 16px;
+    background-color: var(--secundary-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block; /*aeita o margin*/
+    text-transform: uppercase;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ## FORM ## */
+.card_register{
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 2px 6px -2px rgb(0 0 0 / 20%);
+    animation: up 200ms ease;
+}
+input,select{
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ input[type="radio"]{
+    width: initial;
+    margin-left: 12px;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"],
+a.button{
+    padding: 8px 32px;
+    background-color: var(--secundary-color);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    color: black;
+}
+
+a.button{
+    display: block;
+    box-sizing: border-box; /*respeira o limite da box */
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
