@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+
+    <title>Formulário com mensagem</title>
+
+
+    <script>
+        function CarregaDoForm() {
+            const nome = document.FormDados.nome.value;
+            const endereco = document.FormDados.endereco.value;
+            const Livro = document.FormDados.Livro.value;
+            const quantidade = document.FormDados.quantidade.value;
+
+            window.alert(`
+            Olá ${nome}, tudo bem? 
+            Com base nos livros: ${Livro},
+            iremos te indicar ${quantidade} para que possa ler durante o ano :) 
+            Segue o endereço cadastrado para entrega  ${endereco} `);
+
+            let obj = {
+                name: nome,
+                lastname: endereco,
+                password: quantidade,
+                address: {
+                    street: Livro
+                }
+            };
+            console.log(obj);
+        }
+    </script>
+
+
+
+
+</head>
+
+<body class="inicio">
+
+
+    <center>
+        <div class="w-25">
+
+            <h2 class="text-left mt-5">Faça seu cadastro:</h2>
+            <form action="post" name="FormDados">
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="endereco" placeholder="Digite seu endereco">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="number" name="quantidade" placeholder="Digite quantos livros deseja receber">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="Livro" placeholder="Digite seus livros preferidos">
+                </div>
+
+                <button type="button" onclick="CarregaDoForm()" class="btn btn-primary">Carregar dados do
+                    formulário</button>
+            </form>
+
+        </div>
+    </center>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
