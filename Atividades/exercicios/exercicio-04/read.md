@@ -1,1 +1,1 @@
-Atividades desenvolvidas referente aos roteiros de aual 10 ao 13.
+Atividades desenvolvidas referente aos roteiros de aula 10 ao 13.
