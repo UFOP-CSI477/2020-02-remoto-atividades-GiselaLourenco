@@ -2,10 +2,10 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
+- Nome: Gisela Lourenço 
+- Matrícula: 16.1.8367  
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2021
 - Link para o seu GitHub:
 
 ## [Projeto final:](./Projeto/README.md) 
