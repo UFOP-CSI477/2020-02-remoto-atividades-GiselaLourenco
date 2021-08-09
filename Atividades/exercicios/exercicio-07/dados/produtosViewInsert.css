@@ -1,0 +1,14 @@
+body{
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    background-color: teal;
+    color: white;
+    border-radius: 3px;
+}
+
+#form-grupo{
+    border-radius: 1rem;
+  
+} 
