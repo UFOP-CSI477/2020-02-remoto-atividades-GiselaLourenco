@@ -14,8 +14,12 @@ Apresente uma breve descrição do seu projeto.
 Desenvolverei um sistema de academia, onde será possível:
 
 Cadastrar novos monitores e alunos;
+
 Designar um monitor a um aluno;
+
 Pesquisar pelos dados dos usuários;
+
 Acessar o perfil individual dos alunos e monitores.
-Usarei  PostgreSQL, Js, Node, Html e CSS, além do padrão MVC! 
+
+Usarei  PostgreSQL, Js, Node, Html e CSS, além do padrão MVC.
 
