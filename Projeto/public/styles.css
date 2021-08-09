@@ -1,0 +1,353 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+:root {
+    --primary-color: yellow;
+    --secondary-color: black;
+    --terciary-color: #f0f0f0;
+    --quarternary-color: rgba(255, 255, 255, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 832px;
+    margin: 0 auto;
+}
+
+html {
+    /* 1rem == 10px */
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--terciary-color);
+    font-size: 1.6rem;
+}
+
+header {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+}
+
+.nav {
+    font-size: 2.2rem;
+}
+
+.nav a + a {
+    margin-left: 32px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--terciary-color);
+    position: relative;
+}
+
+.nav a.active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+.nav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+}
+
+.nav a:hover::after {
+    width: 100%;
+    left: 0;
+    transition: all 200ms ease-in-out;
+}
+
+/* === CARD === */
+
+.card {
+    background-color: var(--secondary-color);
+    margin: 140px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 0.4fr 0.6fr;
+
+    box-shadow: 0px 16px 32px var(--secondary-color);
+
+    animation: up 700ms ease-out;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        box-shadow: 0px 16px 64px var(--secondary-color);
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.details {
+    color: var(--terciary-color);
+    padding: 32px;
+}
+
+.details .item {
+    padding: 16px 0 8px;
+}
+
+.details .item + .item {
+    border-top: 1px solid var(--quarternary-color);
+}
+
+.details .item:last-child {
+    border-bottom: 1px solid var(--quarternary-color);
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.7px;
+}
+
+.details .item div:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.details .item span.label {
+    margin-top: 8px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+span.label {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    color: var(--secondary-color);
+    margin-right: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* === FORM === */
+
+input, select {
+    width: 100%;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--terciary-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+input::placeholder {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    width: initial;
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-right: 6px;
+    margin-left: -6px;
+}
+
+a.button,
+#form-delete button[type="submit"],
+button[type="submit"] {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 32px;
+    width: 100%;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+a.button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    align-items: center;
+}
+
+#form-delete button[type="submit"] {
+    background-color: #f00;
+}
+
+/* === TABLE === */
+.table-container {
+    display: block;
+    padding: 32px;
+}
+
+.table-container table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+td, th {
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--quarternary-color);
+}
+
+tr:last-child td {
+    border: none;
+}
+
+.table-container .button {
+    display: initial;
+    margin: 0;
+    width: auto;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+tbody tr td:first-child div {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 56px;
+    height: 56px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+th {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.7px;
+}
+
+.card.table-container {
+    display: grid;
+    grid-template: 64px 1fr 32px / 1fr;
+}
+
+.table-container .header {
+    align-self: start;
+}
+
+.table-container .header,
+.table-container .header form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table-container .header form input {
+    border: 1px solid #888;
+    padding: 2px 8px;
+    margin-right: 8px;
+}
+
+/* === PAGINATION === */
+
+.table-container .pagination {
+    align-self: end;
+    justify-self: center;
+    color: var(--primary-color);
+}
+
+.table-container .pagination * {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.table-container .pagination a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* === MEDIA QUERIES === */
+
+@media (max-width: 830px) {
+    td div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    td:nth-child(2) div span {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .can-hide {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .can-hide-2 {
+        display: none;
+    }
+
+    .card.table-container {
+        grid-template: 80px 1fr 32px / 1fr;
+    }
+
+    .table-container .header {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .table-container .header form {
+        margin-top: 8px;
+    }
+
+    .card {
+        grid-template: 200px 1fr / 1fr;
+    }
+}
