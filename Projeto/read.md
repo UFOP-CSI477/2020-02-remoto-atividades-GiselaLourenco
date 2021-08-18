@@ -3,22 +3,35 @@
 ## Funcionalidades implementadas 
 Foi desenvolvido um sistema de gerenciamento de academia. É possível cadastrar novos clientes e instrutores.
 Para cadastrar instrutores é necessário preencher:
+    
     1.Foto (através do unsplash);
+    
     2.Nome;
+    
     3.Sexo;
+    
     4.Área de atuação.
 
 Na tabela dos intrutores é exibido o nome, a área de atuação e quantos alunos estão designado a ele. Ao clicar em 'ver' é possível visualizar todas as informações do mesmo, além de poder editar ou deletar o perfil.
 
 Para cadastrar um novo membro da academia é necessário preencher:
+    
     1.Foto (através do unsplash);
+    
     2.Nome;
+    
     3.E-mail;
+    
     4.Data de nascimento;
+    
     5.Sexo;
+    
     6.Tipo Sanguíneo;
+    
     7.Altura;
+    
     8.Peso;
+    
     9.Selecionar o instrutor responsável.
 
 Na tabela dos membros é exibido o nome, e-mail, altura e peso. Além disso, ao clicar em 'ver' é possível visualizar todas as informações do mesmo, além de poder editar ou deletar o perfil.
